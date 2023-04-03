@@ -1,19 +1,19 @@
 #pragma once
 #include "users.h"
-class Messages
+class Message
 {
 public:
-	Messages(std::string& sender, std::string& receiver, std::string& text) {};
+	Message(std::string& from, std::string& to, std::string& text) {};
 
-	std::string getSender();
-	std::string getReceiver();
-	std::string getText();
-	void setSender();
-	void setReceiver();
+	const std::string& getFrom() const;
+	const std::string& getTo() const;
+	const std::string& getText() const;
+	void setFrom();
+	void setTo();
 	void setText();
 
 private:
 	std::string _text;
-	std::string _sender;
-	std::string _receiver;
+	std::string _from;
+	std::string _to;
 };

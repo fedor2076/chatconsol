@@ -1,5 +1,7 @@
-#include "messages.h"
+#include "message.h"
 
+Message::Message(const std::string& from, const std::string& to, const std::string& text) :
+	_from(from),_to(to),_text(text){}
 const std::string& Message::getFrom() const
 {
 	return _from;
@@ -15,11 +17,5 @@ const std::string& Message::getText() const
 	return _text;
 }
 
-void Message::setFrom()
-{
-}
 
-void setFrom();
-void setTo();
-void setText();
 

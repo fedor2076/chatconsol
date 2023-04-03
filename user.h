@@ -3,15 +3,16 @@
 class User
 {
 public:
-	User(std::string& name, std::string& login, std::string& psw);
-			
+	User(const std::string& name, const std::string& login, const std::string& psw);
+	
+	const std::string& getName() const;
 	const std::string&  getLogin()  const;
-	const std::string&  getPsw() const;
-	const std::string&  getName() const;
-
+	const std::string& getPsw() const;
+	
+	void  setName(const std::string& name);
 	void  setLogin(const std::string& login);
 	void  setPsw(const std::string& psw);
-	void  setName(const std::string& name);
+	
 
 private:
 
